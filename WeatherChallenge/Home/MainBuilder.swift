@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+enum MainBuilder: Builder {
+    typealias Built = MainViewController
+}

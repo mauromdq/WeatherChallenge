@@ -9,7 +9,7 @@
 import Foundation
 
 final class Context {
-    private let apiService: ApiService
+    let apiService: ApiService
     private let persistenceController: PersistenceController
 
     init(apiService: ApiService, persistenceController: PersistenceController) {

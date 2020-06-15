@@ -14,3 +14,9 @@ protocol ViewModel: class {
 
     init(dataSource: DataSource, router: Router)
 }
+
+protocol ViewModelNotRouter: class {
+    associatedtype DataSource: ViewModelDataSource
+
+    init(dataSource: DataSource)
+}

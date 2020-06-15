@@ -20,4 +20,8 @@ extension RouterProtocol {
    func routeBack() {
         viewController?.navigationController?.popViewController(animated: true)
     }
+
+    func push(viewController: UIViewController) {
+        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

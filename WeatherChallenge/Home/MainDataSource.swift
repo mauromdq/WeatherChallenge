@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+struct MainDataSource: ViewModelDataSource {
+    let context: Context    
+}
