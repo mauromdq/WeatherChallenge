@@ -18,6 +18,7 @@ class MainViewModel: ViewModel {
     private let router: MainRouter
     private let context: Context
 
+    private lazy var appDelegate = UIApplication.shared.delegate as! AppDelegate
     let cityNames = Observable<[String]>(["Buenos Aires", "Londres", "Los Angeles","Mar del Plata", "Madrid", "Moscow", "Miami", "New York", "Paris", "Pekin", "Roma", "Sidney", "Tokio", "Ushuaia"])
     let selectedCity = Observable<String?>(nil)
     private(set) var canContinue = Observable(false)
@@ -47,7 +48,6 @@ class MainViewModel: ViewModel {
 extension MainViewModel {
     func saveInCoreData() {
         guard let city = selectedCity.value else { return }
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "SelectedCity", in: context)
         let newSel = NSManagedObject(entity: entity!, insertInto: context)
@@ -60,7 +60,6 @@ extension MainViewModel {
     }
     
     func getFromCoreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SelectedCity")
         let context = appDelegate.persistentContainer.viewContext
         request.returnsObjectsAsFaults = false
@@ -69,8 +68,7 @@ extension MainViewModel {
             for data in result as! [NSManagedObject] {
                 selectedCity.value = (data.value(forKey: "cityName") as! String)
                 canContinue.value = true
-          }
-            
+          }            
         } catch {
             print("Failed")
         }

@@ -12,7 +12,14 @@ protocol ApiServiceDelegate: class {
     func apiServiceDidRecieveUnauthorizedError(_ apiService: ApiService, retryHandler: @escaping () -> Void)
 }
 
-class ApiService {
+protocol ApiServiceProtocol {
+    typealias GetWeatherHandler = (Result<Weather, Error>) -> Void
+    func getCurrentWeather(cityName: String, then handler: @escaping GetWeatherHandler)
+    typealias GetDailyWeatherHandler = (Result<DailyWeather, Error>) -> Void
+    func getDailyWeather(cityName: String, then handler: @escaping GetDailyWeatherHandler)
+}
+
+class ApiService: ApiServiceProtocol {
     weak var delegate: ApiServiceDelegate?
     
     typealias GetWeatherHandler = (Result<Weather, Error>) -> Void
@@ -40,11 +47,7 @@ extension ApiService {
                       self?.perform(request: request, then: handler)
                    }
                } else if case .failure(let error) = response, case NetworkError.serverError(code: let code, data: let data) = error, let errorData = data {
-//                   if ((400 ..< 500) ~= code), let error = self.error(fromData: errorData) {
                        handler(.failure(error))
-//                   } else {
-//                       handler(response)
-//                   }
                } else {
                    handler(response)
                }

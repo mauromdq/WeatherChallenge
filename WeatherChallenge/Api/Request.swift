@@ -67,29 +67,11 @@ extension NetworkRequest {
     
     @discardableResult
     func load(request: URLRequest, then handler: @escaping (Result<LoadedType, Error>) -> Void) -> Request? {
-        var urlRequest = request
-//        if let accessToken = accessToken {
-//            urlRequest.setValue(accessToken, forHTTPHeaderField: "Authorization")
-//        }
-        let configuration = URLSessionConfiguration.default
-//#if ENV_PROD
-//        configuration.connectionProxyDictionary = [:]
-//        configuration.connectionProxyDictionary?[kCFNetworkProxiesHTTPEnable] = 0
-//        configuration.connectionProxyDictionary?[kCFProxyTypeKey] = kCFProxyTypeNone
-//#endif
-        let session = URLSession.shared //URLSession(
-//            configuration: configuration,
-//            delegate: SessionPinningDelegate.shared,
-//            delegateQueue: nil
-//        )
+        let urlRequest = request
+        let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) { (data: Data?, response: URLResponse?, error: Error?) in
             if let httpResponse = response as? HTTPURLResponse, !(200..<300 ~= httpResponse.statusCode) {
                 if httpResponse.statusCode != 401 {
-//                    let url = (try? request.url?.absoluteString.replacingOccurences(ofRegex: "/\\d+/", with: "/<id>/")) ?? "com.prisma.todopago"
-//                    let error = NSError(domain: url,
-//                                        code: httpResponse.statusCode,
-//                                        userInfo: ["url": request.url?.absoluteString ?? "", "data": data?.utf8String ?? ""])
-//                    Crashlytics.crashlytics().record(error: error)
                 }
                 DispatchQueue.main.async {
                     handler(Result.failure(NetworkError.serverError(code: httpResponse.statusCode, data: data)))

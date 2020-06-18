@@ -18,13 +18,15 @@
 		FA0C93B42493BAC00024AB71 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C93B32493BAC00024AB71 /* CustomNavigationController.swift */; };
 		FA18BE6624958A9C00CBAE95 /* GetDailyWeatherResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18BE6524958A9C00CBAE95 /* GetDailyWeatherResource.swift */; };
 		FA18BE682495905A00CBAE95 /* DailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18BE672495905A00CBAE95 /* DailyWeather.swift */; };
+		FA2A5316249BF6CA00A76B48 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2A5315249BF6CA00A76B48 /* TableViewTests.swift */; };
 		FA43D17F2492A72800ED3922 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D17E2492A72800ED3922 /* AppDelegate.swift */; };
 		FA43D1832492A72800ED3922 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D1822492A72800ED3922 /* MainViewController.swift */; };
 		FA43D1862492A72800ED3922 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA43D1842492A72800ED3922 /* MainViewController.storyboard */; };
 		FA43D1892492A72800ED3922 /* WeatherChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA43D1872492A72800ED3922 /* WeatherChallenge.xcdatamodeld */; };
 		FA43D18B2492A72900ED3922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA43D18A2492A72900ED3922 /* Assets.xcassets */; };
 		FA43D18E2492A72900ED3922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA43D18C2492A72900ED3922 /* LaunchScreen.storyboard */; };
-		FA43D1992492A72A00ED3922 /* WeatherChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D1982492A72A00ED3922 /* WeatherChallengeTests.swift */; };
+		FA43D1992492A72A00ED3922 /* WeatherChallengeApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D1982492A72A00ED3922 /* WeatherChallengeApiTests.swift */; };
+		FA5C3515249A854000042F99 /* MockApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C3514249A854000042F99 /* MockApiService.swift */; };
 		FA65D4BE249654D30074A141 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65D4BD249654D30074A141 /* DailyViewController.swift */; };
 		FA65D4C0249654F50074A141 /* DailyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65D4BF249654F50074A141 /* DailyViewModel.swift */; };
 		FA65D4C22496550D0074A141 /* DailyDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65D4C12496550D0074A141 /* DailyDataSource.swift */; };
@@ -81,6 +83,7 @@
 		FA0C93B32493BAC00024AB71 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		FA18BE6524958A9C00CBAE95 /* GetDailyWeatherResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDailyWeatherResource.swift; sourceTree = "<group>"; };
 		FA18BE672495905A00CBAE95 /* DailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeather.swift; sourceTree = "<group>"; };
+		FA2A5315249BF6CA00A76B48 /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
 		FA43D17B2492A72800ED3922 /* WeatherChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA43D17E2492A72800ED3922 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA43D1822492A72800ED3922 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -90,8 +93,9 @@
 		FA43D18D2492A72900ED3922 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA43D18F2492A72900ED3922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA43D1942492A72A00ED3922 /* WeatherChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA43D1982492A72A00ED3922 /* WeatherChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherChallengeTests.swift; sourceTree = "<group>"; };
+		FA43D1982492A72A00ED3922 /* WeatherChallengeApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherChallengeApiTests.swift; sourceTree = "<group>"; };
 		FA43D19A2492A72A00ED3922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5C3514249A854000042F99 /* MockApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiService.swift; sourceTree = "<group>"; };
 		FA65D4BD249654D30074A141 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		FA65D4BF249654F50074A141 /* DailyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewModel.swift; sourceTree = "<group>"; };
 		FA65D4C12496550D0074A141 /* DailyDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDataSource.swift; sourceTree = "<group>"; };
@@ -230,7 +234,9 @@
 		FA43D1972492A72A00ED3922 /* WeatherChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA43D1982492A72A00ED3922 /* WeatherChallengeTests.swift */,
+				FA5C3513249A84F300042F99 /* Mocks */,
+				FA2A5315249BF6CA00A76B48 /* TableViewTests.swift */,
+				FA43D1982492A72A00ED3922 /* WeatherChallengeApiTests.swift */,
 				FA43D19A2492A72A00ED3922 /* Info.plist */,
 			);
 			path = WeatherChallengeTests;
@@ -244,6 +250,14 @@
 				FA7303A92497A7AE00B58FC6 /* UIExtensions.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		FA5C3513249A84F300042F99 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FA5C3514249A854000042F99 /* MockApiService.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		FA696E252492AC0600DB22D8 /* MVVM */ = {
@@ -545,7 +559,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA43D1992492A72A00ED3922 /* WeatherChallengeTests.swift in Sources */,
+				FA5C3515249A854000042F99 /* MockApiService.swift in Sources */,
+				FA43D1992492A72A00ED3922 /* WeatherChallengeApiTests.swift in Sources */,
+				FA2A5316249BF6CA00A76B48 /* TableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

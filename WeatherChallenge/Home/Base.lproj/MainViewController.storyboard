@@ -15,19 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mauro's Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cL-DQ-Kt8">
-                                <rect key="frame" x="80.5" y="50" width="214.5" height="34.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cL-DQ-Kt8">
+                                <rect key="frame" x="67" y="50" width="241.5" height="34.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="2"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione una ciudad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-az-3yB">
-                                <rect key="frame" x="50" y="163.5" width="275" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nMy-nc-O0l">
                                 <rect key="frame" x="0.0" y="256" width="375" height="155"/>
                                 <subviews>
@@ -64,21 +59,42 @@
                                 <color key="textColor" red="0.40000283720000002" green="0.39999482040000001" blue="0.40000027420000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Seleccione una ciudad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eT-az-3yB">
+                                <rect key="frame" x="67.5" y="163.5" width="240" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="bMl-tp-I04"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mauro Garcia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3d-WX-Y5b">
+                                <rect key="frame" x="256" y="630.5" width="103" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="102" id="rdA-pd-Vp7"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="sX5-iR-DGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47018443514817748" green="0.67829134228134791" blue="0.72523397842639592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="nMy-nc-O0l" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1sm-iw-re3"/>
                             <constraint firstItem="nMy-nc-O0l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2A4-xy-OTW"/>
                             <constraint firstItem="eSA-lU-zaY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="73D-Og-7fN"/>
+                            <constraint firstItem="h3d-WX-Y5b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="83p-jz-vj1"/>
                             <constraint firstItem="9cL-DQ-Kt8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="96F-CW-18R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h3d-WX-Y5b" secondAttribute="trailing" constant="16" id="Iu3-2g-q8i"/>
                             <constraint firstItem="3eT-az-3yB" firstAttribute="top" secondItem="eSA-lU-zaY" secondAttribute="bottom" constant="8.5" id="ZcQ-Wt-NiP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3eT-az-3yB" secondAttribute="trailing" constant="50" id="aTm-wN-wam"/>
                             <constraint firstItem="eSA-lU-zaY" firstAttribute="top" secondItem="9cL-DQ-Kt8" secondAttribute="bottom" constant="50" id="cic-I0-Hxb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nMy-nc-O0l" secondAttribute="trailing" id="gvD-RO-cnP"/>
                             <constraint firstItem="3eT-az-3yB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hh6-52-MR7"/>
                             <constraint firstItem="nMy-nc-O0l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ioG-yS-t1a"/>
                             <constraint firstItem="9cL-DQ-Kt8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="isS-AM-9A4"/>
-                            <constraint firstItem="3eT-az-3yB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kXg-By-VTv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h3d-WX-Y5b" secondAttribute="bottom" constant="16" id="tb9-eY-wul"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -90,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="114.50892857142857"/>
+            <point key="canvasLocation" x="140" y="113.79310344827587"/>
         </scene>
     </scenes>
     <resources>

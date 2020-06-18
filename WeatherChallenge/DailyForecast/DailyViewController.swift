@@ -18,7 +18,7 @@ class DailyViewController: UIViewController, ViewController {
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet weak var cityLabel: UILabel!    
     @IBOutlet weak var countryLabel: UILabel!
-    @IBOutlet private weak var weatherTableView: UITableView!
+    @IBOutlet weak var weatherTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -38,11 +38,9 @@ class DailyViewModel: ViewModel {
     func callExternalService() {
         guard let city = selectedCity.value else { return }        
         context.apiService.getDailyWeather(cityName: city) { [weak self] (result) in
-            guard let `self` = self else { return }
-            //            self.router.hideLoadingIndicator()
+            guard let `self` = self else { return }            
             switch result {
             case .success(let weather):
-                print(weather)
                 self.dailyWeather.value = weather
                 self.weatherList.value = weather.list
                 self.callEnded.value = true

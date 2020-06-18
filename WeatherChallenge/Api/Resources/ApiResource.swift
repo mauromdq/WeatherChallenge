@@ -26,9 +26,9 @@ enum Endpoint {
 
 extension ApiResource where Self.Model: Decodable {
     func makeModel(fromData data: Data) throws -> Model {
-        let decored = JSONDecoder()
-        decored.keyDecodingStrategy = .convertFromSnakeCase        
-        return try decored.decode(Model.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return try decoder.decode(Model.self, from: data)
     }
 }
 

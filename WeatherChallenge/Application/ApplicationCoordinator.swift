@@ -13,17 +13,12 @@ class ApplicationCoordinator: UITabBarController {
     private let apiService = ApiService()
     private lazy var persistenceController = PersistenceController()
     
-//        : PersistenceController = {
-//        PersistenceController(keyValueStorage: keyValueStorage)
-//    }()
     private lazy var context: Context = {
         Context(apiService: apiService,
                 persistenceController: persistenceController)
     }()
         
     func initialize(on window: UIWindow, _ application: UIApplication, and launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
-//        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-//        initialConfiguration()
         startApplication(on: window)
     }
 

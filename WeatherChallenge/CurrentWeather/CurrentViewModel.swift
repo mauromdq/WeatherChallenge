@@ -27,17 +27,12 @@ class CurrentViewModel: ViewModel {
         callExternalService()
     }
     
-    func onBack() {
-        router.routeBack()
-    }
-    
     func callExternalService() {
         guard let city = selectedCity.value else { return }
         context.apiService.getCurrentWeather(cityName: city) { [weak self] (result) in        
             guard let `self` = self else { return }            
             switch result {
-            case .success(let weather):
-                print(weather)
+            case .success(let weather):                
                 self.weather.value = weather
                 self.callEnded.value = true
             case .failure:

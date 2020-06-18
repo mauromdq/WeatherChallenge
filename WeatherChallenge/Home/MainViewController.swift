@@ -63,7 +63,8 @@ class MainViewController: UIViewController, ViewController {
         toolBar.tintColor = .gray
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Listo", style: UIBarButtonItem.Style.done, target: self, action: #selector(self.doneTapped))
-        toolBar.setItems([doneButton], animated: false)
+        let hiddenButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([hiddenButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
                 
         cityPickerView.backgroundColor = .white
