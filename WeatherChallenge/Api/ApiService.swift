@@ -47,7 +47,11 @@ extension ApiService {
                       self?.perform(request: request, then: handler)
                    }
                } else if case .failure(let error) = response, case NetworkError.serverError(code: let code, data: let data) = error, let errorData = data {
-                       handler(.failure(error))
+               //if ((400 ..< 500) ~= code), let error = self.error(fromData: errorData) {
+                    handler(.failure(error))
+               //                   } else {
+               //                       handler(response)
+               //                   }
                } else {
                    handler(response)
                }
